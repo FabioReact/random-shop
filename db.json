@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Tshirt - Batman",
+            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "price": "15"
+        },
+        {
+            "id": 2,
+            "title": "Tshirt - Superman",
+            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "price": "15"
+        },
+        {
+            "id": 3,
+            "title": "Tshirt - Ironman",
+            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "price": "15"
+        },
+        {
+            "id": 4,
+            "title": "Tshirt - Batman",
+            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "price": "15"
+        },
+        {
+            "id": 5,
+            "title": "Tshirt - Batman",
+            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "price": "15"
+        },
+        {
+            "id": 6,
+            "title": "Tshirt - Batman",
+            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "price": "15"
+        }
+    ]
+}
