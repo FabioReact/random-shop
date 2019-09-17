@@ -28,7 +28,19 @@ export default class Shop extends Component {
     }
 
     onAddItem = (id) => {
+        const result = this.state.cart.find(element => element.id === id)
         
+        if (result) {
+            const index = this.state.cart.indexOf(result)
+            return this.setState(state => {
+                const newCart = [...state.cart]
+                newCart[index].quantity += 1
+                return {
+                    cart: newCart
+                }
+            })
+        }
+
         this.setState(state => {
             return {
                 cart: state.cart.concat({
