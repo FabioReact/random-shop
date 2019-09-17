@@ -77,7 +77,7 @@ export default class Shop extends Component {
                         </Item.Group>
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <Cart />
+                        <Cart items={this.state.cart} />
                     </Grid.Column>
                 </Grid>
             </div>

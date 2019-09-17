@@ -9,31 +9,13 @@
         {
             "id": 2,
             "title": "Tshirt - Superman",
-            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
-            "price": "15"
+            "img": "https://static.fnac-static.com/multimedia/Images/FR/MC/88/29/7e/25045384/1540-1/tsp20150512184008/T-Shirt-Superman-Man-of-Steel-Logo-Superman-M.jpg",
+            "price": "20"
         },
         {
             "id": 3,
             "title": "Tshirt - Ironman",
-            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
-            "price": "15"
-        },
-        {
-            "id": 4,
-            "title": "Tshirt - Batman",
-            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
-            "price": "15"
-        },
-        {
-            "id": 5,
-            "title": "Tshirt - Batman",
-            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
-            "price": "15"
-        },
-        {
-            "id": 6,
-            "title": "Tshirt - Batman",
-            "img": "https://amp.businessinsider.com/images/56e71048dd0895ed158b4684-750-386.png",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHtfDfSqXdjGDcfKdf1z5rTGdYOFcbfgPkFWuNmyFyJA_W2yO4",
             "price": "15"
         }
     ]

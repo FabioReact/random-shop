@@ -15,23 +15,25 @@ export default class MenuExampleBasic extends Component {
     // console.log(this.props)
 
     return (
-      <Menu>
-        <Menu.Item
-          name='home'
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        >
-            <Link to="/">Accueil</Link>
-        </Menu.Item>
-
-        <Menu.Item
-          name='shop'
-          active={activeItem === 'shop'}
-          onClick={this.handleItemClick}
-        >
-            <Link to="/shop">Boutique</Link>
-        </Menu.Item>
-      </Menu>
+        <Menu>
+            <Menu.Item
+                as="span"
+                name='Accueil'
+                active={activeItem === 'home'}
+                onClick={this.handleItemClick}
+            >
+                <Link to="/">Accueil</Link>                
+            </Menu.Item>
+            
+            <Menu.Item
+                as='span'
+                name='shop'
+                active={activeItem === 'shop'}
+                onClick={this.handleItemClick}
+            >
+                <Link to="/shop">Boutique</Link>
+            </Menu.Item>
+        </Menu>
     )
   }
 }
