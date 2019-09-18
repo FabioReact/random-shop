@@ -11,9 +11,12 @@ const initialCart = {
 
 const cartReducer = (state = initialCart, action) => {
     switch (action.type) {
-        case 'YOLO': {
-            console.log('Doing Nothing')
-            return state
+        case 'ADD_TO_CART': {
+            const newCart = state.cart.concat(action.payload)
+            return {
+                ...state,
+                cart: newCart
+            }
         }
         default:
             return state

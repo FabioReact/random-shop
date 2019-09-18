@@ -3,23 +3,19 @@ import { Card, Icon, Sticky } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 const Cart = (props) => {
-    const {items} = props
     console.log(props)
     return (
         <Sticky>
             <Card>
                 <Card.Content header='Panier' />
                 <Card.Content description={"Description du produit"} />
-                {items.map(item => {
-                    const title = fetch(`http://localhost:4000/products/${item.id}`)
-                        .then(result => result.json())
-                        .then(data => {
-                            console.log(data)
-                            return data.title
-                        })
-                        console.log(title)
-                    return (<p>{item.id} - Quantité: {item.quantity}</p>)
-                })}
+                <ul>
+                    {props.cart.map(item => {
+                        return (
+                            <li key={item.id}>{item.title} - {item.price}€</li>
+                        )
+                    })}
+                </ul>
                 <Card.Content extra>
                     <Icon name='plus square outline' />Ajouter
                 </Card.Content>
@@ -30,7 +26,8 @@ const Cart = (props) => {
 
 const mapStateToProps = state => {
     return {
-        cart: state.cart    }
+        cart: state.cart
+    }
 }
 
 export default connect(
