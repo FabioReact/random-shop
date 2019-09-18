@@ -1,13 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { connect } from 'react-redux'
 
 import './App.css'
 import MenuExampleBasic from './components/MenuExampleBasic'
 import Shop from './pages/Shop'
 
 const App = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <Router>
       <MenuExampleBasic />
@@ -16,12 +15,4 @@ const App = (props) => {
   );
 }
 
-const mapStateToProps = (state) => ({
-  panier: state.panier,
-  user: state.username
-})
-
-export default connect(
-  mapStateToProps,
-  // mapDispatchToProps
-)(App)
+export default App

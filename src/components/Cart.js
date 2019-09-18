@@ -1,9 +1,10 @@
 import React from 'react'
 import { Card, Icon, Sticky } from 'semantic-ui-react'
+import { connect } from 'react-redux'
 
-
-const Cart = ({items}) => {
-
+const Cart = (props) => {
+    const {items} = props
+    console.log(props)
     return (
         <Sticky>
             <Card>
@@ -27,5 +28,12 @@ const Cart = ({items}) => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        cart: state.cart    }
+}
 
-export default Cart
+export default connect(
+    mapStateToProps,
+    null
+)(Cart)
