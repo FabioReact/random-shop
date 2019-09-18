@@ -3,7 +3,7 @@ import { Button, Item } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 const ShopItem = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <Item>
             <Item.Image size='small' src={props.data.img} />

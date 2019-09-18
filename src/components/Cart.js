@@ -1,31 +1,39 @@
 import React from 'react'
-import { Card, Icon, Sticky, Button } from 'semantic-ui-react'
+import { Card, Icon, Sticky, Button, List, Image } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 const Cart = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <Sticky>
             <Card>
                 <Card.Content header='Panier' />
-                <Card.Content description={"Description du produit"} />
-                <ul>
-                    {props.cart.map(item => {
-                        return (
-                            <li key={item.id}>
-                                {item.title} - {item.price}€
-                                <Button
-                                    icon="trash alternate"
-                                    negative
-                                    basic
-                                    onClick={() => props.onDeleteFromCart(item.id)} 
-                                />
-                            </li>
-                        )
-                    })}
-                </ul>
-                <Card.Content extra>
-                    <Icon name='plus square outline' />Ajouter
+                <Card.Content>
+                    <List divided relaxed>
+                        {props.cart.map(item => {
+                            return (
+                                <List.Item key={item.id}>
+                                    <Image avatar src={item.img} />
+                                    <List.Content>
+                                        <List.Header as='a'>{item.title}</List.Header>
+                                        <List.Description as='a'>
+                                            {item.price}€ x{item.quantity}
+                                        </List.Description>
+                                    </List.Content>
+                                    <Button
+                                        icon="trash alternate"
+                                        floated="right"
+                                        negative
+                                        basic
+                                        onClick={() => props.onDeleteFromCart(item.id)} 
+                                    />
+                                </List.Item>
+                            )
+                        })}
+                    </List>
+                </Card.Content>
+                <Card.Content extra textAlign="center">
+                    <Button icon="shopping cart" positive content="Commander" />
                 </Card.Content>
             </Card>
         </Sticky>
