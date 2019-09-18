@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Icon, Sticky } from 'semantic-ui-react'
+import { Card, Icon, Sticky, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 const Cart = (props) => {
@@ -12,7 +12,15 @@ const Cart = (props) => {
                 <ul>
                     {props.cart.map(item => {
                         return (
-                            <li key={item.id}>{item.title} - {item.price}€</li>
+                            <li key={item.id}>
+                                {item.title} - {item.price}€
+                                <Button
+                                    icon="trash alternate"
+                                    negative
+                                    basic
+                                    onClick={() => props.onDeleteFromCart(item.id)} 
+                                />
+                            </li>
                         )
                     })}
                 </ul>
@@ -30,7 +38,13 @@ const mapStateToProps = state => {
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return {
+        onDeleteFromCart: (id) => dispatch({type: 'DELETE_FROM_CART', payload: {id}})
+    }
+}
+
 export default connect(
     mapStateToProps,
-    null
+    mapDispatchToProps
 )(Cart)

@@ -33,7 +33,8 @@ export default class Shop extends Component {
                                 <ShopItem 
                                     data={product}
                                     key={product.id}
-                                />)}
+                                />
+                            )}
                         </Item.Group>
                     </Grid.Column>
                     <Grid.Column width={4}>
